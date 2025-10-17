@@ -22,8 +22,8 @@
 
 #include "GlfwOcctView.h"
 
-#include "imgui/imgui_impl_glfw.h"
-#include "imgui/imgui_impl_opengl3.h"
+#include "imgui_impl_glfw.h"
+#include "imgui_impl_opengl3.h"
 
 #include <AIS_Shape.hxx>
 #include <AIS_ViewCube.hxx>
@@ -210,7 +210,7 @@ void GlfwOcctView::initGui()
     ImGui::CreateContext();
 
     ImGuiIO& aIO = ImGui::GetIO();
-    aIO.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+    //aIO.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
 
     ImGui_ImplGlfw_InitForOpenGL(myOcctWindow->getGlfwWindow(), Standard_True);
     ImGui_ImplOpenGL3_Init("#version 330");
